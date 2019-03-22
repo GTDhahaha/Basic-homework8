@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+	int i,j,n,pri=0;
+	
+	printf("Enter n to find the prime number in 1 - n :");
+	scanf("%d",&n);
+	
+	for(i=2;i<=n;i++)
+	{
+		pri=0;
+		
+		for(j=1;j<=n;j++)
+		{
+			if((i%j)==0)pri++;
+			if(pri>2)break;
+		}
+		if(pri<=2)printf("%d is a prime number.\n",i);
+	}
+	system("pause");
+	return 0;
+}
